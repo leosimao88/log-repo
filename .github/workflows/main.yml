@@ -1,6 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 name: CI
 on:
+  push:
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -9,7 +11,7 @@ jobs:
     steps:
       - name: Adicionando mensagens de log
         run: |
-          echo "::debug:: Mensagem de Log Debug"
+          echos "::debug:: Mensagem de Log Debug"
           echo "::warning:: Mensagem de Log Warning"
           echo "::notice:: Mensagem de Log Notice"
           echo "::error:: Mensagem de Log Error executado por ${{ github.actor }}"
