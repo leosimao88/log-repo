@@ -13,3 +13,12 @@ jobs:
           echo "::warning:: Mensagem de Log Warning"
           echo "::notice:: Mensagem de Log Notice"
           echo "::error:: Mensagem de Log Error executado por ${{ github.actor }}"
+      - name: Adicionando Logs agrupados
+        run: |
+          echo "::group:: Grupo de Logs"
+          echo "Informacao XPTO 1"
+          echo "Informacao XPTO 2"
+          echo "Informacao XPTO 3"
+          echo "Informacao XPTO 4"
+          echo "Esse workflow foi dispatado por ${{ github.actor }}"
+          echo "::endgroup::"
